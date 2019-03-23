@@ -17,11 +17,8 @@ $(document).ready(function() {
     let hungryIntervalId = bongo.hungry();
     let sleepIntervalId = bongo.sleepy();
     let boredIntervalId = bongo.bored();
-    // let deathIntervalId = bongo.death();
     bongo.death(hungryIntervalId, sleepIntervalId, boredIntervalId);
-    // bongo.trueDeath(deathIntervalId);
     bongo.checkNumbers();
-    // sleepBar(bongo);
     bongo.sleepBar();
     bongo.foodBar();
     bongo.funBar();
@@ -48,29 +45,5 @@ $(document).ready(function() {
       bongo.kill();
       console.log(bongo.food)
     });
-
-
-    // bongo.endIt(hungryIntervalId);
-    // bongo.endIt(sleepIntervalId);
-    // bongo.endIt(boredIntervalId);
-    // bongo.endIt(deathIntervalId);
   });
-
 });
-
-
-
-
-
-
-
-// $(document).ready(function() {
-//   $('#ping-pong-form').submit(function(event) {
-//     event.preventDefault();
-//     var goal = $('#goal').val();
-//     var output = pingPong(goal);
-//     output.forEach(function(element) {
-//       $('#solution').append("<li>" + element + "</li>");
-//     });
-//   });
-// });

@@ -6,21 +6,9 @@ export class Tamagotchi {
     this.attention = 10;
   }
 
-
-  // existence() {
-  //   setInterval(() => {
-  //     this.food + 3;
-  //     this.sleep - 2;
-  //     this.attention--;
-  //   }, 1000);
-  // }
-
-
   endIt(intervalId){
     clearInterval(intervalId);
   }
-
-
 
   hungry() {
   var hungryId = setInterval(() => {
@@ -28,6 +16,7 @@ export class Tamagotchi {
     }, 6000);
     return hungryId;
   }
+
   sleepy() {
   var sleepyId = setInterval(() => {
       this.sleep--;
@@ -72,7 +61,6 @@ export class Tamagotchi {
     var intervalId = setInterval(() => {
       if (this.food <= 0 || this.sleep <= 0 || this.attention <= 0) {
         if (!dead) {
-          // alert("Your Tamagotchi is dead, my condolences");
           this.endIt(hungryId);
           this.endIt(sleepyId);
           this.endIt(boredId);
@@ -87,12 +75,6 @@ export class Tamagotchi {
     }, 1000);
     return intervalId;
   };
-
-  // trueDeath(deathInt) {
-  //   if (true){
-  //     this.endIt(deathInt);
-  //   }
-  // };
 
   pickOn() {
     this.attention--;
