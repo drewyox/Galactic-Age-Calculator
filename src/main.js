@@ -6,7 +6,17 @@ import $ from 'jquery';
 import {Tamagotchi} from "./backEnd.js";
 
 
+
 $(document).ready(function() {
+
+  $(".birthDateForm").submit(function(event){
+    event.preventDefault();
+    const birth = $("#birthDate").val();
+    console.log(birth);
+
+
+  });
+
   $('.nameIt').submit(function(event) {
     event.preventDefault();
     var name = $('input#name-input').val();
