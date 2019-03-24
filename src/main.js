@@ -3,7 +3,7 @@ import 'bootstrap/scss/bootstrap.scss';
 import './sass/styles.scss';
 import './backEnd.js';
 import $ from 'jquery';
-import {Tamagotchi} from "./backEnd.js";
+import {Tamagotchi, age} from "./backEnd.js";
 
 
 
@@ -13,6 +13,8 @@ $(document).ready(function() {
     event.preventDefault();
     const birth = $("#birthDate").val();
     console.log(birth);
+    const normalAge = age(birth);
+    console.log(normalAge);
 
 
   });
