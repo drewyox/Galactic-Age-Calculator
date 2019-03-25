@@ -38,15 +38,15 @@ export class AgeOnPlanets{
     return (this.earthExp-this.earthAge);
   }
   mercuryExp(){
-    return (this.earthExp/.24-this.earthAge/.24 + "years remaining on Mercury");
+    return (this.earthExp/.24-this.earthAge/.24);
   }
   venusExp(){
-    return Math.floor(this.earthExp - this.earthAge/.62 + "years remaining on Mercury")
+    return Math.floor(this.earthExp - this.earthAge/.62)
   }
   marsExp(){
-    return Math.floor(this.earthExp - this.earthAge/1.88 + "years remaining on Mars")
+    return Math.floor(this.earthExp - this.earthAge/1.88)
   }
   jupExp(){
-    return Math.floor(this.earthExp - this.earthAge/11.86 + "years remaining on Jupiter")
+    return Math.floor(this.earthExp - this.earthAge/11.86)
   }
 }
