@@ -19,8 +19,7 @@ export class AgeOnPlanets{
     this.earthExp = earthExp;
   }
   earthYears(){
-    const earthy = Math.floor(this.earthAge);
-    return earthy;
+    return Math.floor(this.earthAge);
   }
   mercuryAge(){
     return Math.floor(this.earthAge/.24);
@@ -34,7 +33,7 @@ export class AgeOnPlanets{
   jupAge() {
     return Math.floor(this.earthAge/11.86);
   }
-  earthExp() {
+  earthExp1() {
     return (this.earthExp-this.earthAge);
   }
   mercuryExp(){
@@ -49,4 +48,5 @@ export class AgeOnPlanets{
   jupExp(){
     return Math.floor(this.earthExp - this.earthAge/11.86)
   }
+  
 }

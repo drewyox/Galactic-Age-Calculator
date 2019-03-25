@@ -29,7 +29,9 @@ describe ("The age functions", function() {
 
   it('should calculate how much time they have left based on life expectancy on the relative planet', function(){
     const test = new AgeOnPlanets(26, 78)
-    expect(test.earthExp()).toEqual(78-26);
+    expect(test.earthExp1()).toEqual(78-26);
   })
+
+  
 
 });
