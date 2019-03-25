@@ -34,19 +34,19 @@ export class AgeOnPlanets{
     return Math.floor(this.earthAge/11.86);
   }
   earthExp1() {
-    return (this.earthExp-this.earthAge);
+    return Math.floor(this.earthExp-this.earthAge);
   }
   mercuryExp(){
-    return (this.earthExp/.24-this.earthAge/.24);
+    return Math.floor(this.earthExp/.24-this.earthAge/.24);
   }
   venusExp(){
-    return Math.floor(this.earthExp - this.earthAge/.62)
+    return Math.floor(this.earthExp/.62 - this.earthAge/.62)
   }
   marsExp(){
-    return Math.floor(this.earthExp - this.earthAge/1.88)
+    return Math.floor(this.earthExp/1.88 - this.earthAge/1.88)
   }
   jupExp(){
-    return Math.floor(this.earthExp - this.earthAge/11.86)
+    return Math.floor(this.earthExp/11.86 - this.earthAge/11.86)
   }
 }
 

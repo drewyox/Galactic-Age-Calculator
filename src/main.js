@@ -24,10 +24,11 @@ $(document).ready(function() {
         $("#ageOutput").append("You are " + arf.marsAge() + " years old on Mars. ");
         $("#ageOutput").append("You are " + arf.jupAge() + " years old on Jupiter. ");
     }
-    displayEx(expect);
-    function displayEx(expect1){
+    displayEx(birth, expect);
+    function displayEx(birthDaze, expect1){
       const lExpect = expectations(expect1);
-      let arf2 = new AgeOnPlanets(0, lExpect);
+      const normalAge = age(birthDaze);
+      let arf2 = new AgeOnPlanets(normalAge, lExpect);
       $("#ageOutput").append("You have " + arf2.earthExp1() + " years remaining on Earth. ");
       $("#ageOutput").append("You have " + arf2.mercuryExp() + " years remaining on Mercury. ");
       $("#ageOutput").append("You have " + arf2.venusExp() + " years remaining on Venus. ");
