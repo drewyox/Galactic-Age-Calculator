@@ -15,7 +15,7 @@ $(document).ready(function() {
     console.log(birth);
     const normalAge = age(birth);
     console.log(normalAge);
-
-
+    const testAge = new Date(1992, 9, 23)
+    console.log(age(testAge));
   });
 });
