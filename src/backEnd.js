@@ -12,8 +12,17 @@ export function age(input){
 export class AgeOnPlanets{
   constructor(earthAge){
     this.earthAge = earthAge;
-    mercuryAge(){
-      return this.earthAge/.24;
-    }  
-
+  }
+  mercuryAge(){
+    return Math.floor(this.earthAge/.24);
+  }
+  venusAge(){
+    return Math.floor(this.earthAge/.62);
+  }
+  marsAge(){
+    return Math.floor(this.earthAge/1.88);
+  }
+  jupAge() {
+    return Math.floor(this.earthAge/11.86);
+  }
 }
