@@ -13,7 +13,7 @@ describe ("The age functions", function() {
   })
 
   it('should calculate their age on other planets using their age in earth years Venus', function(){
-    const test = new AgeOnPlanets(26 0)
+    const test = new AgeOnPlanets(26, 0)
     expect(test.venusAge()).toEqual(41);
   })
 
@@ -27,33 +27,9 @@ describe ("The age functions", function() {
     expect(test.jupAge()).toEqual(2);
   })
 
-  it('should calculate how much time they have left based on life expectancy on the relative planet'function(){
-    const test = new AgeOnPlanets(26, 0)
+  it('should calculate how much time they have left based on life expectancy on the relative planet', function(){
+    const test = new AgeOnPlanets(26, 78)
+    expect(test.earthExp()).toEqual(78-26);
   })
 
-  it('should print how many years above the life expectancy you are if applicable')
-
-
 });
-
-
-
-  //
-  // it('should count down by one every 6 seconds', function(){
-  //   jasmine.clock().tick(6001);
-  //   bingo.hungry();
-  //   bingo.sleepy();
-  //   bingo.bored();
-  //   expect(bingo.food, bingo.sleep, bingo.attention).toEqual(9, 10, 8);
-  // });
-  //
-  // it('should display death message when any stat gets to 0', function(){
-  //   bingo.attention = 0;
-  //   expect(bingo.death()).toEqual(true);
-  // })
-  //
-  //
-  // it('should have a progress bar that depletes based on the stat', function(){
-  //   jasmine.clock().tick(5001)
-  //   expect(bingo.sleepBar()).toEqual(3)
-  // })
