@@ -48,5 +48,13 @@ export class AgeOnPlanets{
   jupExp(){
     return Math.floor(this.earthExp - this.earthAge/11.86)
   }
-  
+}
+
+export function exceed(lifeExpectancy, age){
+  if (age > lifeExpectancy) {
+    const lifeExceed = age-lifeExpectancy;
+    return lifeExceed;}
+  else if (age < lifeExpectancy){
+    $("#overLife").hide();
+  }
 }

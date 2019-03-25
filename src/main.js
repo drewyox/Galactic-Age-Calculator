@@ -3,7 +3,7 @@ import 'bootstrap/scss/bootstrap.scss';
 import './sass/styles.scss';
 import './backEnd.js';
 import $ from 'jquery';
-import {age, AgeOnPlanets, expectations} from "./backEnd.js";
+import {age, AgeOnPlanets, expectations, exceed} from "./backEnd.js";
 
 
 
@@ -34,5 +34,19 @@ $(document).ready(function() {
       $("#ageOutput").append("You have " + arf2.marsExp() + " years remaining on Mars. ");
       $("#ageOutput").append("You have " + arf2.jupExp() + " years remaining on Jupiter. ");
     }
+
+    const difference = exceed(expect, age(birth));
+    showLifeEXC(difference);
+    function showLifeEXC(differenceLife){
+      const over = age(differenceLife);
+      let arf3 = new AgeOnPlanets(over, 0)
+      $("#overLife").append("Wow! You're " + arf3.earthYears() + " years past the average life expectancy on Earth! ");
+      $("#overLife").append("Wow! You're " + arf3.mercuryAge() + " years past the average life expectancy on Mercury! ");
+      $("#overLife").append("Wow! You're " + arf3.venusAge() + " years past the average life expectancy on Venus! ");
+      $("#overLife").append("Wow! You're " + arf3.marsAge() + " years past the average life expectancy on Mars! ");
+      $("#overLife").append("Wow! You're " + arf3.jupAge() + " years past the average life expectancy on Jupiter! ");
+    }
+
+
   });
 });
