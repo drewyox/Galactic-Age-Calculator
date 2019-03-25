@@ -1,17 +1,25 @@
 import $ from 'jquery';
-
-export function age(input){
+export {age, AgeOnPlanets, expectations}
+function age(input){
   const now = new Date();
-  console.log(now);
   const birthdayInput = new Date(input);
-  console.log(birthdayInput);
   let yearsOld = Math.floor((((((now.getDate()+1)/30.45)+(now.getMonth()))/12)+now.getYear())-(((((birthdayInput.getDate()+1)/30.45)+(birthdayInput.getMonth()))/12)+birthdayInput.getYear()));
   return yearsOld;
 }
 
-export class AgeOnPlanets{
-  constructor(earthAge){
+function expectations(expInput) {
+  const lifeExpectation = expInput;
+  return lifeExpectation;
+}
+
+class AgeOnPlanets{
+  constructor(earthAge, earthExp){
     this.earthAge = earthAge;
+    this.earthExp = earthExp;
+  }
+  earthYears(){
+    const earthy = Math.floor(this.earthAge);
+    return earthy;
   }
   mercuryAge(){
     return Math.floor(this.earthAge/.24);
@@ -24,5 +32,20 @@ export class AgeOnPlanets{
   }
   jupAge() {
     return Math.floor(this.earthAge/11.86);
+  }
+  earthExp() {
+    return (this.earthExp-this.earthAge);
+  }
+  mercuryExp(){
+    return (this.earthExp/.24-this.earthAge/.24 + "years remaining on Mercury");
+  }
+  venusExp(){
+    return Math.floor(this.earthExp - this.earthAge/.62 + "years remaining on Mercury")
+  }
+  marsExp(){
+    return Math.floor(this.earthExp - this.earthAge/1.88 + "years remaining on Mars")
+  }
+  jupExp(){
+    return Math.floor(this.earthExp - this.earthAge/11.86 + "years remaining on Jupiter")
   }
 }
